@@ -11,7 +11,7 @@ sidebar <-  dashboardSidebar(
     sliderInput("IDthreshold", 
                 label = tags$p("Minimum conservation of epitopes\nwithin SARS-CoV-2 sequences"),
                 # label = HTML("Minimum fraction of matching<br/>SARS-CoV-2 sequences<br/>for epitope selection"),
-                min = 0.70, max = 1.00, value = ID_THRESH, step = 0.05
+                min = 0.70, max = 1.00, value = ID_THRESH, step = 0.01
     ),
     menuItem(strong("Identified B cell epitopes"), 
              icon = icon("dna"), 

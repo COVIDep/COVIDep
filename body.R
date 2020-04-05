@@ -1060,13 +1060,13 @@ body <- dashboardBody(
                 box(title = strong("COVIDep development"), width = 12, 
                     status = "primary", solidHeader = TRUE, collapsible = FALSE, collapsed = FALSE,
                     # HTML('<center><img src="flowchart_01.jpeg"></center>')
-                    tags$p("COVIDep is developed and maintained by Prof. Matthew McKay's Signal Processing & Computational Biology Lab (",
+                    tags$p("COVIDep is developed and maintained by the Signal Processing & Computational Biology Lab (",
                            tags$a("SPCB", href = "https://www.mckayspcb.com/", target="_blank"), ") at the Hong Kong University of Science 
                            and Technology (HKUST)."
                            ),
                     tags$p("COVIDep aims to provide real-time potential vaccine targets for SARS-CoV-2. It screens the SARS-derived B cell and 
                            T cell epitopes (available at ", tags$a("VIPR", href = "https://www.viprbrc.org/brc/home.spg?decorator=corona", target="_blank"), "/", tags$a("IEDB", href = "http://www.iedb.org/", target="_blank"), ") and identifies those which are highly conserved within the available SARS-CoV-2 
-                           sequences (continuing to be deposited at ", tags$a("GISAID", href = "https://www.gisaid.org/CoV2020/", target="_blank"), "."),
+                           sequences (continuing to be deposited at ", tags$a("GISAID", href = "https://www.gisaid.org/CoV2020/", target="_blank"), ")."),
                     tags$p("The raw genome sequences from 'Human' hosts are downloaded from ", tags$a("GISAID", href = "https://www.gisaid.org/CoV2020/", target="_blank"), 
                            " and filtered to include only the full-length genomes. The sequences which are marked in the 'Comments' column on the ", tags$a("GISAID", href = "https://www.gisaid.org/CoV2020/", target="_blank"), 
                            " website as having issues are excluded. All remaining genomic sequences are aligned and translated to yield protein 
@@ -1077,7 +1077,7 @@ body <- dashboardBody(
                     tags$p("COVIDep is developed using the ", tags$a("Shiny", href = "http://shiny.rstudio.com/", 
                                                                       target="_blank"), 
                            " based web app development framework provided by RStudio. It is an open source web app and all the code scripts are available at the ",
-                           tags$a("GitHub", href = "https://github.com/faraz107/COVIDep", target="_blank"), " repository. The web app display is optimized 
+                           tags$a("GitHub", href = "https://github.com/COVIDep/COVIDep", target="_blank"), " repository. The web app display is optimized 
                            for viewing at 100% screen resolution on Chrome for PC/laptop. For any questions, comments 
                            or suggestions, please feel free to contact us at COVIDep@ust.hk." )
                 ),
@@ -1086,22 +1086,22 @@ body <- dashboardBody(
                     img(src='Figure_Method.png', align = "center", width = "100%", height = "100%")
                 ),
                 box(title = strong("Related publications"), width = 12, status = "primary", solidHeader = TRUE,
-                    tags$p("Ahmed, S. F., Quadeer, A. A. & McKay, M. R. Preliminary identification of potential vaccine targets for the COVID-19 coronavirus (SARS-CoV-2) based on SARS-CoV immunological studies. Viruses 12, 254 (2020) ", 
-                           tags$a("doi.org/10.3390/v12030254", href = "https://doi.org/10.3390/v12030254", target="_blank")),
-                    tags$p("Grifoni, A. et al. A sequence homology and bioinformatic approach can predict candidate targets for immune responses to SARS-CoV-2. Cell Host Microbe 27, 1–10 (2020)"), 
-                           # tags$a("https://doi.org/10.3390/v12030254", href = "https://doi.org/10.3390/v12030254", target="_blank")),
-                    tags$p("Zheng, M. & Song, L. Novel antibody epitopes dominate the antigenicity of spike glycoprotein in SARS-CoV-2 compared to SARS-CoV. Cell. Mol. Immunol. 2, 9–11 (2020)"), 
-                           # tags$a("https://doi.org/10.3390/v12030254", href = "https://doi.org/10.3390/v12030254", target="_blank")),
-                    tags$p("Poh, C. M. et al. Potent neutralizing antibodies in the sera of convalescent COVID-19 patients are directed against conserved linear epitopes on the SARS-CoV-2 spike protein. bioRxiv (2020)"), 
-                           # tags$a("doi:10.1101/2020.03.30.015461", href = "https://doi:10.1101/2020.03.30.015461", target="_blank")),
-                    tags$p("Wrapp, D. et al. Cryo-EM structure of the 2019-nCoV spike in the prefusion conformation. Science. 367, 1260–1263 (2020)"), 
-                           # tags$a("https://doi.org/10.3390/v12030254", href = "https://doi.org/10.3390/v12030254", target="_blank")),
-                    tags$p("Ou, X. et al. Characterization of spike glycoprotein of SARS-CoV-2 on virus entry and its immune cross-reactivity with SARS-CoV. Nat. Commun. 11, 1620 (2020)"), 
-                           # tags$a("https://doi.org/10.3390/v12030254", href = "https://doi.org/10.3390/v12030254", target="_blank")),
-                    tags$p("Zheng, Z. et al. Monoclonal antibodies for the S2 subunit of spike of SARS-CoV cross-react with the newly-emerged SARS-CoV-2. bioRxiv (2020)"), 
-                           # tags$a("https://doi.org/10.3390/v12030254", href = "https://doi.org/10.3390/v12030254", target="_blank")),
-                    tags$p("Walls, A. C. et al. Structure, function, and antigenicity of the SARS-CoV-2 spike glycoprotein. Cell 180, 1–12 (2020)")#, 
-                           # tags$a("https://doi.org/10.3390/v12030254", href = "https://doi.org/10.3390/v12030254", target="_blank")
+                    tags$p("Ahmed, S. F., Quadeer, A. A. & McKay, M. R. Preliminary identification of potential vaccine targets for the COVID-19 coronavirus (SARS-CoV-2) based on SARS-CoV immunological studies. Viruses 12, 254 (2020)", 
+                           tags$a(" doi: 10.3390/v12030254", href = "https://doi.org/10.3390/v12030254", target="_blank")),
+                    tags$p("Grifoni, A. et al. A sequence homology and bioinformatic approach can predict candidate targets for immune responses to SARS-CoV-2. Cell Host Microbe 27, 1–10 (2020)", 
+                           tags$a(" doi: 10.1016/j.chom.2020.03.002", href = "https://doi.org/10.1016/j.chom.2020.03.002", target="_blank")),
+                    tags$p("Zheng, M. & Song, L. Novel antibody epitopes dominate the antigenicity of spike glycoprotein in SARS-CoV-2 compared to SARS-CoV. Cell. Mol. Immunol. 2, 9–11 (2020)", 
+                           tags$a("doi: 10.1038/s41423-020-0385-z", href = "https://doi.org/10.1038/s41423-020-0385-z", target="_blank")),
+                    tags$p("Poh, C. M. et al. Potent neutralizing antibodies in the sera of convalescent COVID-19 patients are directed against conserved linear epitopes on the SARS-CoV-2 spike protein. bioRxiv (2020)", 
+                           tags$a(" doi: 10.1101/2020.03.30.015461", href = "https://doi:10.1101/2020.03.30.015461", target="_blank")),
+                    tags$p("Wrapp, D. et al. Cryo-EM structure of the 2019-nCoV spike in the prefusion conformation. Science. 367, 1260–1263 (2020)", 
+                           tags$a("doi: 10.1126/science.abb2507", href = "https://doi.org/10.1126/science.abb2507", target="_blank")),
+                    tags$p("Ou, X. et al. Characterization of spike glycoprotein of SARS-CoV-2 on virus entry and its immune cross-reactivity with SARS-CoV. Nat. Commun. 11, 1620 (2020)", 
+                           tags$a(" doi: 10.1038/s41467-020-15562-9", href = "https://doi.org/10.1038/s41467-020-15562-9", target="_blank")),
+                    tags$p("Zheng, Z. et al. Monoclonal antibodies for the S2 subunit of spike of SARS-CoV cross-react with the newly-emerged SARS-CoV-2. bioRxiv (2020)", 
+                           tags$a(" doi: 10.1101/2020.03.06.980037", href = "https://doi.org/10.1101/2020.03.06.980037", target="_blank")),
+                    tags$p("Walls, A. C. et al. Structure, function, and antigenicity of the SARS-CoV-2 spike glycoprotein. Cell 180, 1–12 (2020)", 
+                           tags$a(" doi: 10.1016/j.cell.2020.02.058", href = "https://doi.org/10.1016/j.cell.2020.02.058", target="_blank"))
                 )
                 )
     )

@@ -473,7 +473,7 @@ server <- function(input, output) {
     
     DT::datatable(data = rdfs$df_Bepitopes %>% 
                     mutate(IEDB = paste0("<a href=\"http://www.iedb.org/epitope/", rdfs$df_Bepitopes$IEDB, "\"target=\"_blank\">", rdfs$df_Bepitopes$IEDB, "</a>")) %>% 
-                    mutate(Conservation = round(nCoV, 2)) %>% 
+                    mutate(Conservation = trunc(nCoV*10000)/10000) %>% 
                     select(IEDB, Epitope, Length, Protein, Conservation), style = 'bootstrap4',
                   editable = FALSE,
                   filter = list(position = 'none', clear = 'TRUE'),
@@ -498,7 +498,7 @@ server <- function(input, output) {
     
     DT::datatable(data = rdfs$df_Bepitopes %>% 
                     mutate(IEDB = paste0("<a href=\"http://www.iedb.org/epitope/", rdfs$df_Bepitopes$IEDB, "\"target=\"_blank\">", rdfs$df_Bepitopes$IEDB, "</a>")) %>% 
-                    filter(Protein == "S") %>% mutate(Conservation = round(nCoV, 2)) %>% 
+                    filter(Protein == "S") %>% mutate(Conservation = trunc(nCoV*10000)/10000) %>% 
                     select(IEDB, Epitope, Length, Start, End, Conservation), style = 'bootstrap4',
                   editable = FALSE,
                   filter = list(position = 'none', clear = 'TRUE'),
@@ -522,7 +522,7 @@ server <- function(input, output) {
     
     DT::datatable(data = rdfs$df_Bepitopes %>% 
                     mutate(IEDB = paste0("<a href=\"http://www.iedb.org/epitope/", rdfs$df_Bepitopes$IEDB, "\"target=\"_blank\">", rdfs$df_Bepitopes$IEDB, "</a>")) %>% 
-                    filter(Protein == "E") %>% mutate(Conservation = round(nCoV, 2)) %>% 
+                    filter(Protein == "E") %>% mutate(Conservation = trunc(nCoV*10000)/10000) %>% 
                     select(IEDB, Epitope, Length, Start, End, Conservation), style = 'bootstrap4',
                   editable = FALSE,
                   filter = list(position = 'none', clear = 'TRUE'),
@@ -546,7 +546,7 @@ server <- function(input, output) {
     
     DT::datatable(data = rdfs$df_Bepitopes %>% 
                     mutate(IEDB = paste0("<a href=\"http://www.iedb.org/epitope/", rdfs$df_Bepitopes$IEDB, "\"target=\"_blank\">", rdfs$df_Bepitopes$IEDB, "</a>")) %>% 
-                    filter(Protein == "M") %>% mutate(Conservation = round(nCoV, 2)) %>% 
+                    filter(Protein == "M") %>% mutate(Conservation = trunc(nCoV*10000)/10000) %>% 
                     select(IEDB, Epitope, Length, Start, End, Conservation), style = 'bootstrap4',
                   editable = FALSE,
                   filter = list(position = 'none', clear = 'TRUE'),
@@ -566,7 +566,7 @@ server <- function(input, output) {
     
     DT::datatable(data = rdfs$df_Bepitopes %>% 
                     mutate(IEDB = paste0("<a href=\"http://www.iedb.org/epitope/", rdfs$df_Bepitopes$IEDB, "\"target=\"_blank\">", rdfs$df_Bepitopes$IEDB, "</a>")) %>% 
-                    filter(Protein == "N") %>% mutate(Conservation = round(nCoV, 2)) %>% 
+                    filter(Protein == "N") %>% mutate(Conservation = trunc(nCoV*10000)/10000) %>% 
                     select(IEDB, Epitope, Length, Start, End, Conservation), style = 'bootstrap4',
                   editable = FALSE, 
                   filter = list(position = 'none', clear = 'TRUE'),
@@ -590,7 +590,7 @@ server <- function(input, output) {
     
     DT::datatable(data = rdfs$df_Bepitopes %>% 
                     mutate(IEDB = paste0("<a href=\"http://www.iedb.org/epitope/", rdfs$df_Bepitopes$IEDB, "\"target=\"_blank\">", rdfs$df_Bepitopes$IEDB, "</a>")) %>% 
-                    filter(Protein == "orf1a") %>% mutate(Conservation = round(nCoV, 2)) %>% 
+                    filter(Protein == "orf1a") %>% mutate(Conservation = trunc(nCoV*10000)/10000) %>% 
                     select(IEDB, Epitope, Length, Start, End, Conservation), style = 'bootstrap4',
                   editable = FALSE,
                   filter = list(position = 'none', clear = 'TRUE'),
@@ -614,7 +614,7 @@ server <- function(input, output) {
     
     DT::datatable(data = rdfs$df_Bepitopes %>%  
                     mutate(IEDB = paste0("<a href=\"http://www.iedb.org/epitope/", rdfs$df_Bepitopes$IEDB, "\"target=\"_blank\">", rdfs$df_Bepitopes$IEDB, "</a>")) %>% 
-                    filter(Protein == "orf1b") %>% mutate(Conservation = round(nCoV, 2)) %>% 
+                    filter(Protein == "orf1b") %>% mutate(Conservation = trunc(nCoV*10000)/10000) %>% 
                     select(IEDB, Epitope, Length, Start, End, Conservation), style = 'bootstrap4',
                   editable = FALSE,
                   filter = list(position = 'none', clear = 'TRUE'),
@@ -639,7 +639,7 @@ server <- function(input, output) {
     
     DT::datatable(data = rdfs$df_Bepitopes %>% 
                     mutate(IEDB = paste0("<a href=\"http://www.iedb.org/epitope/", rdfs$df_Bepitopes$IEDB, "\"target=\"_blank\">", rdfs$df_Bepitopes$IEDB, "</a>")) %>% 
-                    filter(Protein == "ORF3a") %>% mutate(Conservation = round(nCoV, 2)) %>% 
+                    filter(Protein == "ORF3a") %>% mutate(Conservation = trunc(nCoV*10000)/10000) %>% 
                     select(IEDB, Epitope, Length, Start, End, Conservation), style = 'bootstrap4',
                   editable = FALSE,
                   filter = list(position = 'none', clear = 'TRUE'),
@@ -663,7 +663,7 @@ server <- function(input, output) {
     
     DT::datatable(data = rdfs$df_Bepitopes %>% 
                     mutate(IEDB = paste0("<a href=\"http://www.iedb.org/epitope/", rdfs$df_Bepitopes$IEDB, "\"target=\"_blank\">", rdfs$df_Bepitopes$IEDB, "</a>")) %>% 
-                    filter(Protein == "ORF6") %>% mutate(Conservation = round(nCoV, 2)) %>% 
+                    filter(Protein == "ORF6") %>% mutate(Conservation = trunc(nCoV*10000)/10000) %>% 
                     select(IEDB, Epitope, Length, Start, End, Conservation), style = 'bootstrap4',
                   editable = FALSE,
                   filter = list(position = 'none', clear = 'TRUE'),
@@ -687,7 +687,7 @@ server <- function(input, output) {
     
     DT::datatable(data = rdfs$df_Bepitopes %>% 
                     mutate(IEDB = paste0("<a href=\"http://www.iedb.org/epitope/", rdfs$df_Bepitopes$IEDB, "\"target=\"_blank\">", rdfs$df_Bepitopes$IEDB, "</a>")) %>% 
-                    filter(Protein == "ORF7a") %>% mutate(Conservation = round(nCoV, 2)) %>% 
+                    filter(Protein == "ORF7a") %>% mutate(Conservation = trunc(nCoV*10000)/10000) %>% 
                     select(IEDB, Epitope, Length, Start, End, Conservation), style = 'bootstrap4',
                   editable = FALSE,
                   filter = list(position = 'none', clear = 'TRUE'),
@@ -711,7 +711,7 @@ server <- function(input, output) {
     
     DT::datatable(data = rdfs$df_Bepitopes %>% 
                     mutate(IEDB = paste0("<a href=\"http://www.iedb.org/epitope/", rdfs$df_Bepitopes$IEDB, "\"target=\"_blank\">", rdfs$df_Bepitopes$IEDB, "</a>")) %>% 
-                    filter(Protein == "ORF7b") %>% mutate(Conservation = round(nCoV, 2)) %>% 
+                    filter(Protein == "ORF7b") %>% mutate(Conservation = trunc(nCoV*10000)/10000) %>% 
                     select(IEDB, Epitope, Length, Start, End, Conservation), style = 'bootstrap4',
                   editable = FALSE,
                   filter = list(position = 'none', clear = 'TRUE'),
@@ -735,7 +735,7 @@ server <- function(input, output) {
     
     DT::datatable(data = rdfs$df_Bepitopes %>% 
                     mutate(IEDB = paste0("<a href=\"http://www.iedb.org/epitope/", rdfs$df_Bepitopes$IEDB, "\"target=\"_blank\">", rdfs$df_Bepitopes$IEDB, "</a>")) %>% 
-                    filter(Protein == "ORF8") %>% mutate(Conservation = round(nCoV, 2)) %>% 
+                    filter(Protein == "ORF8") %>% mutate(Conservation = trunc(nCoV*10000)/10000) %>% 
                     select(IEDB, Epitope, Length, Start, End, Conservation), style = 'bootstrap4',
                   editable = FALSE,
                   filter = list(position = 'none', clear = 'TRUE'),
@@ -759,7 +759,7 @@ server <- function(input, output) {
     
     DT::datatable(data = rdfs$df_Bepitopes %>% 
                     mutate(IEDB = paste0("<a href=\"http://www.iedb.org/epitope/", rdfs$df_Bepitopes$IEDB, "\"target=\"_blank\">", rdfs$df_Bepitopes$IEDB, "</a>")) %>% 
-                    filter(Protein == "ORF10") %>% mutate(Conservation = round(nCoV, 2)) %>% 
+                    filter(Protein == "ORF10") %>% mutate(Conservation = trunc(nCoV*10000)/10000) %>% 
                     select(IEDB, Epitope, Length, Start, End, Conservation), style = 'bootstrap4',
                   editable = FALSE,
                   filter = list(position = 'none', clear = 'TRUE'),
@@ -790,7 +790,7 @@ server <- function(input, output) {
                                              pattern = ",", n = 2)[,1]) %>% 
                     filter(Assay %in% if_else(condition = c(input$Tassay, input$Tassay), 
                                               true = "T cell", false = c("T cell", "MHC ligand"))) %>% 
-                    mutate(Conservation = round(nCoV, 2)) %>% 
+                    mutate(Conservation = trunc(nCoV*10000)/10000) %>% 
                     mutate(`MHC allele class` = `MHC Allele Class`) %>% 
                     mutate(`MHC allele names` = `MHC Allele Names`) %>% 
                     select(IEDB, Epitope, Length, Protein, `MHC allele class`, `MHC allele names`, Conservation), 
@@ -823,7 +823,7 @@ server <- function(input, output) {
                     filter(Assay %in% if_else(condition = c(input$Tassay, input$Tassay), 
                                               true = "T cell", false = c("T cell", "MHC ligand"))) %>%
                     filter(Protein == "S") %>% 
-                    mutate(Conservation = round(nCoV, 2)) %>% 
+                    mutate(Conservation = trunc(nCoV*10000)/10000) %>% 
                     mutate(`MHC allele class` = `MHC Allele Class`) %>% 
                     mutate(`MHC allele names` = `MHC Allele Names`) %>% 
                     select(IEDB, Epitope, Length, Start, End, `MHC allele class`, `MHC allele names`, Conservation),
@@ -856,7 +856,7 @@ server <- function(input, output) {
                     filter(Assay %in% if_else(condition = c(input$Tassay, input$Tassay), 
                                               true = "T cell", false = c("T cell", "MHC ligand"))) %>%
                     filter(Protein == "E") %>% 
-                    mutate(Conservation = round(nCoV, 2)) %>% 
+                    mutate(Conservation = trunc(nCoV*10000)/10000) %>% 
                     mutate(`MHC allele class` = `MHC Allele Class`) %>% 
                     mutate(`MHC allele names` = `MHC Allele Names`) %>% 
                     select(IEDB, Epitope, Length, Start, End, `MHC allele class`, `MHC allele names`, Conservation),
@@ -889,7 +889,7 @@ server <- function(input, output) {
                     filter(Assay %in% if_else(condition = c(input$Tassay, input$Tassay), 
                                               true = "T cell", false = c("T cell", "MHC ligand"))) %>%
                     filter(Protein == "M") %>% 
-                    mutate(Conservation = round(nCoV, 2)) %>% 
+                    mutate(Conservation = trunc(nCoV*10000)/10000) %>% 
                     mutate(`MHC allele class` = `MHC Allele Class`) %>% 
                     mutate(`MHC allele names` = `MHC Allele Names`) %>% 
                     select(IEDB, Epitope, Length, Start, End, `MHC allele class`, `MHC allele names`, Conservation),
@@ -922,7 +922,7 @@ server <- function(input, output) {
                     filter(Assay %in% if_else(condition = c(input$Tassay, input$Tassay), 
                                               true = "T cell", false = c("T cell", "MHC ligand"))) %>%
                     filter(Protein == "N") %>% 
-                    mutate(Conservation = round(nCoV, 2)) %>% 
+                    mutate(Conservation = trunc(nCoV*10000)/10000) %>% 
                     mutate(`MHC allele class` = `MHC Allele Class`) %>% 
                     mutate(`MHC allele names` = `MHC Allele Names`) %>% 
                     select(IEDB, Epitope, Length, Start, End, `MHC allele class`, `MHC allele names`, Conservation),
@@ -955,7 +955,7 @@ server <- function(input, output) {
                     filter(Assay %in% if_else(condition = c(input$Tassay, input$Tassay), 
                                               true = "T cell", false = c("T cell", "MHC ligand"))) %>%
                     filter(Protein == "orf1a") %>% 
-                    mutate(Conservation = round(nCoV, 2)) %>% 
+                    mutate(Conservation = trunc(nCoV*10000)/10000) %>% 
                     mutate(`MHC allele class` = `MHC Allele Class`) %>% 
                     mutate(`MHC allele names` = `MHC Allele Names`) %>% 
                     select(IEDB, Epitope, Length, Start, End, `MHC allele class`, `MHC allele names`, Conservation),
@@ -988,7 +988,7 @@ server <- function(input, output) {
                     filter(Assay %in% if_else(condition = c(input$Tassay, input$Tassay), 
                                               true = "T cell", false = c("T cell", "MHC ligand"))) %>%
                     filter(Protein == "orf1b") %>% 
-                    mutate(Conservation = round(nCoV, 2)) %>% 
+                    mutate(Conservation = trunc(nCoV*10000)/10000) %>% 
                     mutate(`MHC allele class` = `MHC Allele Class`) %>% 
                     mutate(`MHC allele names` = `MHC Allele Names`) %>% 
                     select(IEDB, Epitope, Length, Start, End, `MHC allele class`, `MHC allele names`, Conservation),
@@ -1021,7 +1021,7 @@ server <- function(input, output) {
                     filter(Assay %in% if_else(condition = c(input$Tassay, input$Tassay), 
                                               true = "T cell", false = c("T cell", "MHC ligand"))) %>%
                     filter(Protein == "ORF3a") %>% 
-                    mutate(Conservation = round(nCoV, 2)) %>% 
+                    mutate(Conservation = trunc(nCoV*10000)/10000) %>% 
                     mutate(`MHC allele class` = `MHC Allele Class`) %>% 
                     mutate(`MHC allele names` = `MHC Allele Names`) %>% 
                     select(IEDB, Epitope, Length, Start, End, `MHC allele class`, `MHC allele names`, Conservation),
@@ -1054,7 +1054,7 @@ server <- function(input, output) {
                     filter(Assay %in% if_else(condition = c(input$Tassay, input$Tassay), 
                                               true = "T cell", false = c("T cell", "MHC ligand"))) %>%
                     filter(Protein == "ORF6") %>% 
-                    mutate(Conservation = round(nCoV, 2)) %>% 
+                    mutate(Conservation = trunc(nCoV*10000)/10000) %>% 
                     mutate(`MHC allele class` = `MHC Allele Class`) %>% 
                     mutate(`MHC allele names` = `MHC Allele Names`) %>% 
                     select(IEDB, Epitope, Length, Start, End, `MHC allele class`, `MHC allele names`, Conservation),
@@ -1087,7 +1087,7 @@ server <- function(input, output) {
                     filter(Assay %in% if_else(condition = c(input$Tassay, input$Tassay), 
                                               true = "T cell", false = c("T cell", "MHC ligand"))) %>%
                     filter(Protein == "ORF7a") %>% 
-                    mutate(Conservation = round(nCoV, 2)) %>%
+                    mutate(Conservation = trunc(nCoV*10000)/10000) %>%
                     mutate(`MHC allele class` = `MHC Allele Class`) %>% 
                     mutate(`MHC allele names` = `MHC Allele Names`) %>% 
                     select(IEDB, Epitope, Length, Start, End, `MHC allele class`, `MHC allele names`, Conservation),
@@ -1120,7 +1120,7 @@ server <- function(input, output) {
                     filter(Assay %in% if_else(condition = c(input$Tassay, input$Tassay), 
                                               true = "T cell", false = c("T cell", "MHC ligand"))) %>%
                     filter(Protein == "ORF7b") %>% 
-                    mutate(Conservation = round(nCoV, 2)) %>% 
+                    mutate(Conservation = trunc(nCoV*10000)/10000) %>% 
                     mutate(`MHC allele class` = `MHC Allele Class`) %>% 
                     mutate(`MHC allele names` = `MHC Allele Names`) %>% 
                     select(IEDB, Epitope, Length, Start, End, `MHC allele class`, `MHC allele names`, Conservation),
@@ -1153,7 +1153,7 @@ server <- function(input, output) {
                     filter(Assay %in% if_else(condition = c(input$Tassay, input$Tassay), 
                                               true = "T cell", false = c("T cell", "MHC ligand"))) %>%
                     filter(Protein == "ORF8") %>% 
-                    mutate(Conservation = round(nCoV, 2)) %>% 
+                    mutate(Conservation = trunc(nCoV*10000)/10000) %>% 
                     mutate(`MHC allele class` = `MHC Allele Class`) %>% 
                     mutate(`MHC allele names` = `MHC Allele Names`) %>% 
                     select(IEDB, Epitope, Length, Start, End, `MHC allele class`, `MHC allele names`, Conservation),
@@ -1186,7 +1186,7 @@ server <- function(input, output) {
                     filter(Assay %in% if_else(condition = c(input$Tassay, input$Tassay), 
                                               true = "T cell", false = c("T cell", "MHC ligand"))) %>% 
                     filter(Protein == "ORF10") %>% 
-                    mutate(Conservation = round(nCoV, 2)) %>% 
+                    mutate(Conservation = trunc(nCoV*10000)/10000) %>% 
                     mutate(`MHC allele class` = `MHC Allele Class`) %>% 
                     mutate(`MHC allele names` = `MHC Allele Names`) %>% 
                     select(IEDB, Epitope, Length, Start, End, `MHC allele class`, `MHC allele names`, Conservation),
@@ -2864,7 +2864,7 @@ server <- function(input, output) {
                              #                  true = "T cell", false = c("T cell", "MHC ligand"))
                              ) %>%
                     mutate(Region = Contry) %>%
-                    mutate(Conservation = round(nCoV, 2)) %>% 
+                    mutate(Conservation = trunc(nCoV*10000)/10000) %>% 
                     mutate(Coverage = round(Scov, 2)) %>%
                     mutate(`MHC allele class` = `MHC Allele Class`) %>% 
                     mutate(`MHC allele names` = `MHC Allele Names`) %>% 
@@ -2875,6 +2875,7 @@ server <- function(input, output) {
                   filter = list(position = 'none', clear = 'TRUE'),
                   rownames = FALSE, escape = FALSE,
                   autoHideNavigation = TRUE, selection = 'none', 
+                  colnames = c("IEDB", "Epitope", "Protein", "MHC allele names", "Conservation", "Coverage (%)"),
                   options = list(dom = 'lBfrtip',
                                  fixedHeader = FALSE,
                                  autowidth = TRUE, pageLength = 10, 
